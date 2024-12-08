@@ -1,0 +1,13 @@
+# Logs
+*.log
+
+# Python-specific
+__pycache__/
+*.py[cod]
+
+# Environment files
+.env
+
+# IDE-specific files
+.vscode/
+.idea/
