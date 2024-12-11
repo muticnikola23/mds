@@ -92,7 +92,6 @@ async def update_stock(
         raise HTTPException(status_code=500, detail=f"Unexpected error: {e}")
 
 
-# radi
 @app.get("/{stock_id}")
 async def read_stock(stock_id: int, db: AsyncSession = Depends(get_db)):
     """
@@ -117,7 +116,6 @@ async def read_stock(stock_id: int, db: AsyncSession = Depends(get_db)):
     return stock_data
 
 
-# radi
 @app.post("/create-stock/", status_code=status.HTTP_201_CREATED)
 async def create_stock(
     stock_data: dict = Body(...), db: AsyncSession = Depends(get_db)
